@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "7c3b1c9c-e4e3-4c5c-a61c-c866bcb6d3a3",
+		"name": "ATS-Recruiter-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "45434139",
+		"_collection_link": "https://satyamfaujdar.postman.co/workspace/Satyam-Faujdar's-Workspace~a3704b9c-5e5c-47d2-84e3-7ddeb23ed292/collection/45434139-7c3b1c9c-e4e3-4c5c-a61c-c866bcb6d3a3?action=share&source=collection_link&creator=45434139"
+	},
+	"item": [
+		{
+			"name": "Candidates Service",
+			"item": [
+				{
+					"name": "List all candidates in the database",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/candidates/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new candidate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Monkey D. Luffy\",\r\n  \"age\": 22,\r\n  \"gender\": \"Male\",\r\n  \"email\": \"luffy@example.com\",\r\n  \"phone\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/candidates/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a candidate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Monkey D. Luffy\",\r\n  \"age\": 23,\r\n  \"gender\": \"Male\",\r\n  \"email\": \"luffy@example.com\",\r\n  \"phone\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/candidates/10001/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  a candidate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Monkey D. Luffy\",\r\n  \"age\": 23,\r\n  \"gender\": \"Male\",\r\n  \"email\": \"luffy@example.com\",\r\n  \"phone\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/candidates/10001/"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Candidate API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Monkey D. Luffy\",\r\n  \"age\": 23,\r\n  \"gender\": \"Male\",\r\n  \"email\": \"luffy@example.com\",\r\n  \"phone\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/candidates/search/?q=Zebra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Zebra"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+services:
+    candidate-service:
+        build:
+            context: .
+            dockerfile: services/candidate-service/Dockerfile
+        volumes: 
+            - ./services/candidate-service:/app
+        ports:
+            - "8000:8000"
